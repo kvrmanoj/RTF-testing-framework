@@ -1,0 +1,12 @@
+package test;
+
+
+
+import io.cucumber.testng.*;
+import io.cucumber.testng.CucumberOptions;
+
+
+@CucumberOptions()
+public class Runner {
+
+}

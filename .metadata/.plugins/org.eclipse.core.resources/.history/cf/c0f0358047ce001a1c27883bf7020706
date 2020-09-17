@@ -1,0 +1,74 @@
+package Sample;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class sample {
+
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		// TODO Auto-generated method stub
+		WebDriver driver;
+		String path=System.getProperty("user.dir");
+
+        System.setProperty("webdriver.chrome.driver", path+"//chromedriver");
+
+        driver = new ChromeDriver();
+
+         driver.navigate().to("http://103.44.96.124/BB15SE/Backbone/admin/login.aspx");
+
+        driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+
+        driver.findElement(By.id("uname")).sendKeys("Recpv15");
+         
+        driver.findElement(By.id("upass")).sendKeys("Aosta");
+
+        driver.findElement(By.id("btnloginm")).click();
+        
+        Thread.sleep(9000);
+        Robot robot = new Robot();
+        
+        	
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+        
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyRelease(KeyEvent.VK_TAB);
+        
+        driver.findElement(By.className("form-group select2-form-control select_mtryl")).click();
+        
+        driver.findElement(By.id("s2id_cboDepartment")).click();
+        
+        Thread.sleep(5000);
+        
+        driver.quit();
+        
+      	}
+	
+	public static void keyBoardType(String text) throws AWTException {
+		StringSelection stringSelection = new StringSelection(text);
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		clipboard.setContents(stringSelection, stringSelection);
+
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		
+	}
+
+}
+
+
+

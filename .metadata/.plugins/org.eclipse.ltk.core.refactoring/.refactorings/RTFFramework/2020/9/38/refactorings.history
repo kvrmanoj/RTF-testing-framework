@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;functionalLibrary.DriverInitBaseClass.java&apos; to &apos;InilizeDriver.java&apos;&#x0A;- Original project: &apos;RTFFramework&apos;&#x0A;- Original element: &apos;functionalLibrary.DriverInitBaseClass.java&apos;&#x0A;- Renamed element: &apos;functionalLibrary.InilizeDriver.java&apos;" description="Rename compilation unit &apos;DriverInitBaseClass.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;functionalLibrary{DriverInitBaseClass.java" name="InilizeDriver.java" references="false" stamp="1600149597822" version="1.0"/>
+</session>

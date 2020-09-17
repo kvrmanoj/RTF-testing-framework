@@ -34,14 +34,16 @@ public class PropertyManager {
 		properties.load(FilesUtil.getInputStream(propPath));
 		for(Object property:properties.keySet()) {
 			if(!System.getProperties().containsKey(property)) {
+				System.out.println(properties.get(property).toString());
 				System.setProperty(property.toString(),properties.get(property).toString());
 			}
 		}
 	}
 
 	public static String get(String key) {
-		if(key!=null)
-		return System.getenv(key);
+		if(key!=null) {
+			System.out.println("Values is"+System.getProperty(key));
+		return System.getProperty(key);}
 		else
 		 throw new InputMismatchException("Given property key value is empty");
 	}

@@ -1,0 +1,80 @@
+package ResubaleUtility;
+
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Properties;
+import ResubaleUtility.Const;
+import ResubaleUtility.FilesUtil;
+
+public class PropertyManager {
+	Properties property= new Properties();
+	static {
+	    
+		loadConfigToSystemProp(Const.PROP_PATH);
+	}
+	
+	
+	private static void loadConfigToSystemProp(String propPath) {
+		
+		try {
+			
+			setSystemEnvironmentVariables(propPath);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private static void setSystemEnvironmentVariables(String propPath) throws IOException {
+		Properties properties=new Properties();
+		properties.load(FilesUtil.getInputStream(propPath));
+		for(Object property:properties.keySet()) {
+			if(!System.getProperties().containsKey(property)) {
+				System.setProperty(property.toString(),properties.get(property).toString());
+			}
+		}
+	}
+
+	public static String get(String key) {
+		if(key!=null) {
+			System.out.println(System.getenv(key));
+		return System.getenv(key);}
+		else
+		 throw new InputMismatchException("Given property key value is empty");
+	}
+
+	public static HashMap<String, Object> getPropertyByPrefix(String prefix) {
+		
+		HashMap<String, Object> map=new HashMap<>(); 
+		
+		for(Object key:System.getenv().keySet()) {
+			if(key.toString().startsWith(prefix)) {
+				map.put(key.toString(),System.getenv().get(key).toString());
+			}
+		}
+		
+		for(Object key:System.getProperties().keySet()) {
+			if(key.toString().startsWith(prefix)) {
+				map.put(key.toString(),System.getProperties().get(key).toString());
+			}
+		}
+		
+		return map;
+	}
+
+	public static List getArray(String key, String delimiter) {
+		
+	    String value=System.getProperty(key);
+	    if(key!=null)
+	    return Arrays.asList(Arrays.stream(value.split(delimiter)).map(String::trim).toArray(String[]::new));
+	    
+		return null;
+	}
+	
+	
+    
+}

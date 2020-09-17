@@ -1,0 +1,5 @@
+package functionalLibrary;
+
+public enum Browser {
+
+}

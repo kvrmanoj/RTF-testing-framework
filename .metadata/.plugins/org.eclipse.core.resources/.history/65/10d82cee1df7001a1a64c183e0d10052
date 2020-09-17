@@ -1,0 +1,18 @@
+package functionalLibrary;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebDriverFactory {
+
+	static WebDriver driver;
+	
+	public static WebDriver driver(String browser) {
+		
+	    String path=System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", path+"//chromedriver");
+        driver = new ChromeDriver();
+		return driver;
+	}
+	
+}

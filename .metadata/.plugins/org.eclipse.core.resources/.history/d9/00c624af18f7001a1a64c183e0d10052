@@ -1,0 +1,12 @@
+package functionalLibrary;
+
+import org.openqa.selenium.WebDriver;
+
+public class DriverInitBaseClass {
+	
+	WebDriver driver;
+	 ThreadLocal<WebDriver> webdriver=new ThreadLocal<WebDriver>(); 
+	 
+	 private D
+
+}

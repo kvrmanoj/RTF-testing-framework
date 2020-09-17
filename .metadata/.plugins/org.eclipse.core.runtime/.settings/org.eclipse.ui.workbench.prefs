@@ -1,0 +1,11 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTcucumber.eclipse.editor.presentation
+ColorsAndFontsPreferencePage.selectedElement=Ccucumber.eclipse.editor.presentation.gherkin_string_colour
+EDITION_COLOR=138,226,52
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
+cucumber.eclipse.editor.presentation.gherkin_comment_colour=196,160,0
+cucumber.eclipse.editor.presentation.gherkin_keyword_colour=245,121,0
+cucumber.eclipse.editor.presentation.gherkin_step_colour=115,210,22
+cucumber.eclipse.editor.presentation.gherkin_string_colour=114,159,207
+cucumber.eclipse.editor.presentation.gherkin_text_colour=237,212,0
+eclipse.preferences.version=1

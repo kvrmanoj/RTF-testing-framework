@@ -1,0 +1,28 @@
+package functionalLibrary;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class GirdDriverSetup extends DesiredCapablity implements Driver {
+
+	DesiredCapabilities caps;
+	@Override
+	public DesiredCapabilities getDriverCapability(Browser browser) {
+		
+		switch(browser){
+		case Chrome:
+			cpas=
+		   
+		
+		}
+		return null;
+	}
+
+	@Override
+	public WebDriver getDriver(Browser browser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

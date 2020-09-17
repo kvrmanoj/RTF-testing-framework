@@ -1,0 +1,27 @@
+package functionalLibrary;
+
+import org.openqa.selenium.WebDriver;
+
+public class InilizeDriver {
+	
+	private WebDriver driver=null;
+	
+	 ThreadLocal<WebDriver> thread=new ThreadLocal<WebDriver>(); 
+	 
+	 private  InilizeDriver() {
+		 
+	 }
+	 private static InilizeDriver instance=new InilizeDriver();
+	 
+	 public static Object getInstance() {
+		 return instance;
+	 }
+	 
+	 public  void setDriver(WebDriver driver) {
+		 thread.set(driver);
+	 }
+	 
+	 
+	 
+
+}

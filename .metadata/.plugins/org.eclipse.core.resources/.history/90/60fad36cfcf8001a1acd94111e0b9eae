@@ -1,0 +1,18 @@
+package test;
+
+
+
+import io.cucumber.testng.*;
+import io.cucumber.testng.CucumberOptions;
+
+
+@CucumberOptions(
+		plugin= {"Pretty","html:target/cucumberHtmlReport"
+		},
+		glue= {"test"},
+		features="src/test/resources/Features"
+		
+		)
+public class Runner {
+
+}

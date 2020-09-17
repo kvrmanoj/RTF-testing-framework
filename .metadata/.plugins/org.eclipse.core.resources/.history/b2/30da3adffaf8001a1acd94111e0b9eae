@@ -1,0 +1,27 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+
+import functionalLibrary.Browser;
+import functionalLibrary.WebDriverFactory;
+import io.cucumber.java.en.Given;
+
+
+public class StepDefinition {
+	WebDriver driver=null;
+	@Given("Launch the Application {string}")
+	public void launch_the_application(String string) {
+	    WebDriverFactory driverInstance=new WebDriverFactory();
+	    driver=driverInstance.gettDriver(Browser.Chrome);
+	    driver.get("https://google.com");
+	    driver.manage().window().maximize();
+         	    
+	}
+
+	@Given("Enter the {string} in from field using {string}")
+	public void enter_the_in_from_field_using(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+}

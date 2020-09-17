@@ -1,0 +1,33 @@
+package functionalLibrary;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import ResubaleUtility.Const;
+import ResubaleUtility.PropertyManager;
+
+public class WebDriverFactory {
+
+	static WebDriver driver;
+		
+	public WebDriver gettDriver(Browser browser) {
+		
+		Driver driverInstance;
+		String driverType=PropertyManager.get(Const.DRIVERSETUP);		
+//		switch(driverType){		
+//		case "Local":
+//			driverInstance=new LocalDriverSetup();
+//			driver=driverInstance.getDriver(browser);
+//		    break;
+//		 case "Grid":
+//			 driverInstance=new GirdDriverSetup();
+//			 driver=driverInstance.getDriver(browser);
+//			 break;	 
+//		}
+//		InilizeDriver.getInstance().setDriver(driver);
+//		driver=InilizeDriver.getInstance().getDriver();
+		return driver;
+		
+	 }
+	
+}

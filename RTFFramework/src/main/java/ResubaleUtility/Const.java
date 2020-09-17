@@ -3,8 +3,9 @@ package ResubaleUtility;
 public class Const {
 
 	
-	public static final String PROP_PATH="config.properties";
-	
+	//Driver
+	public static final String DRIVERSETUP="WedDriverType";
+	public static final String PROP_PATH="Config.properties";
 	public static final String ENV="configproperties";
 	public static final String ENV_PATH=ENV+"_properties_file";
 	

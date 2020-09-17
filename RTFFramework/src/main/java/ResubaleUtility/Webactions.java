@@ -11,7 +11,7 @@ public class Webactions implements Actionss {
 	}
 
 	public void clickJSasFallBack(String locator) {
-		WebElement ele=locate(locator);
+		
 	}
 
 	
@@ -28,6 +28,12 @@ public class Webactions implements Actionss {
 
 	@Override
 	public void jsClick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void click(String locator) {
 		// TODO Auto-generated method stub
 		
 	}

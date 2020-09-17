@@ -4,12 +4,27 @@ import org.openqa.selenium.WebDriver;
 
 public class InilizeDriver {
 	
-	WebDriver driver;
-	 ThreadLocal<WebDriver> webdriver=new ThreadLocal<WebDriver>(); 
+	
+	
+	 ThreadLocal<WebDriver> driver=new ThreadLocal<WebDriver>(); 
 	 
 	 private  InilizeDriver() {
 		 
 	 }
+	 private static InilizeDriver instance=new InilizeDriver();
+	 
+	 public static InilizeDriver getInstance() {
+		 return instance;
+	 }
+	 
+	 public  void setDriver(WebDriver driverparam) {
+		 driver.set(driverparam);
+	 }
+	 
+	 public WebDriver getDriver() {
+		 return driver.get();
+	 }
+	 
 	 
 	 
 
